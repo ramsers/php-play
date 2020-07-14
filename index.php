@@ -1,24 +1,22 @@
 <?php 
 
-    $mmaFighters = [
-        [
-            "name"=>"GSP",
-            "age" => 33,
-        ],
-        [
-            "name"=>"Anderson Silva",
-            "age" => 40,
-        ],
-        [
-            "name"=>"Jon Jones",
-            "age" => 36,
-        ],
-        [
-            "name"=>"Jorge Masvidal",
-            "age" => 35
-        ]
-    ];
+$car = "Honda";
+$name="Raheim";
 
+// Get Request
+
+if(isset($_GET["username"])) {
+    echo "<h1>username: {$_GET["username"]}</h1>";
+    echo "<h1>lastname: {$_GET["lastname"]}</h1>";
+    echo "<h1>age: {$_GET["age"]}</h1>";
+};
+
+
+// Post Request
+
+if(isset($_POST["username"])) {
+    echo $_POST["username"];
+}
 ?>
 
 <!DOCTYPE html>
@@ -29,14 +27,13 @@
         <title>Document</title>
     </head>
     <body>
-        <?php 
-        
-            forEach($mmaFighters as $fighter){
-                echo "<hr>";
-                echo "<h4>{$fighter["name"]} {$fighter["age"]}</h4";
-                echo "<hr>";
-            }
-        
-        ?>
+     <form action="index.php" method="POST">
+        <label for="username">username</label>
+        <input type="text" name="username">
+        <input type="password" name="password">
+
+
+        <button type="submit">Submit</button>
+     </form>
     </body>
     </html>
