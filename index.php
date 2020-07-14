@@ -1,24 +1,50 @@
 <?php 
 
-$firstName = "Raheim";
-$lastName = "Bailey";
+$total = 65;
 
-const full = "Raheim Bailey";
-
-$car = "Honda Civic";
-
-$car = "Mercedes Benz";
-
-const plane = "Jet"; 
-
-function printName () {
-    // $car = "BMW";
-
-    global $car;
-
-    return $car;
+if($total > 50 && $total < 100) {
+    echo "You get a free soda";
+} elseif ($total > 100) {
+    echo "You get a free soda & T-Bone!";
+} else {
+    echo "Here is your purchase";
 }
 
+switch($total) {
+    case $total > 50 && $total <= 100:
+        echo "You get a free soda";
+    break;
+    case $total > 100:
+        echo "You get a free soda & T-Bone";
+    break;
+    default:
+    echo "Here is your purchase";
+}
+
+// if ($name == "Raheim") {
+//     echo "Hi Raheim";
+// } elseif ($name == "James"){
+//     echo "Hi James";
+// } elseif ($name == "Cyndia"){
+//     echo "Hi James";
+// } 
+// else {
+//     echo "who is you?";
+// }
+// $age = 19;
+// switch ($age) {
+//     case 21:
+//         echo "You're old enough to drink";
+//       break;
+//     case $age == 18:
+//         echo "You're old enough to smoke";
+//       break;
+//     case $age >= 18 && $age < 21:
+//         echo "You're old enough to smoke but not to drink";
+//       break;
+//       default:
+//       echo "Not old enough";
+//   }
 
 ?>
 
@@ -30,10 +56,6 @@ function printName () {
         <title>Document</title>
     </head>
     <body>
-        <?php echo "<h1>My car is ${car}</h1>"?>
-        <?php echo "<h1>My name is " . full . "</h1>" ?>
-        <?php echo $car; ?>
-        <?php echo plane; ?>
-        <?php echo printName(); ?>
+        <!-- <?php var_dump($totalComp); ?> -->
     </body>
     </html>
