@@ -62,5 +62,6 @@ if(isset($_GET["id"])) {
         <button type="submit">Save</button>
 
     </form>
+    <a href="">Go Back</a>
 </body>
 </html>
